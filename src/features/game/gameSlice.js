@@ -1,9 +1,11 @@
 import { createSlice } from "@reduxjs/toolkit";
 import { rules } from "./gameElements";
 
+const savedScore = localStorage.getItem("saved-score")
+
 const initialState = {
   data: {
-    score: 0,
+    score: savedScore ?? 0,
     playerSelection: null,
     computerSelection: null,
     winner: null,
@@ -18,6 +20,7 @@ export const gameSlice = createSlice({
   reducers: {
     increment: (state) => {
       state.data.score += 1;
+      localStorage.setItem('saved-score', state.data.score)
     },
     selection: (state, action) => {
       const { playerSelection, computerSelection, gamePage } = action.payload;
@@ -30,6 +33,8 @@ export const gameSlice = createSlice({
         state.data.winner = computeWinner(state.data);
         if (state.data.winner === "player") state.data.score += 1;
         else if (state.data.winner === "house") state.data.score -= 1;
+        
+        localStorage.setItem('saved-score', state.data.score)
       }
     },
     resetGame: state => {
