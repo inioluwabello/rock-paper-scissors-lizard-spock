@@ -26,7 +26,7 @@ const Page1 = ({ role, roles }) => {
           <div className="label">YOU PICKED</div>
         </div>
 
-        <div className="desktop">
+        {game.computerSelection && <div className="desktop">
           {game.winner && (
             <h1>{game.winner === "player" ? "YOU WIN" : "YOU LOSE"}</h1>
           )}
@@ -37,7 +37,7 @@ const Page1 = ({ role, roles }) => {
           >
             PLAY AGAIN
           </button>
-        </div>
+        </div>}
 
         {!game.computerSelection && <div className={`empty-selection`}></div>}
         {game.computerSelection && (
@@ -53,7 +53,7 @@ const Page1 = ({ role, roles }) => {
         )}
       </div>
 
-      <div className="mobile status text-center mt-5">
+      {game.computerSelection && <div className="mobile status text-center mt-5">
         {game.winner && (
           <h1>{game.winner === "player" ? "YOU WIN" : "YOU LOSE"}</h1>
         )}
@@ -64,7 +64,7 @@ const Page1 = ({ role, roles }) => {
         >
           PLAY AGAIN
         </button>
-      </div>
+      </div>}
     </>
   );
 };
