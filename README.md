@@ -57,7 +57,8 @@ Not sure what Rock, Paper, Scissors, Lizard, Spock is? [Check out this clip from
 ### Links
 
 - Solution URL: [GitHub](https://github.com/inioluwabello/rock-paper-scissors)
-- Live Site URL: [Vercel](https://rock-paper-scissors-three-red.vercel.app)
+- Live Site URL: [Vercel](https://rock-paper-scissors-lizard-spock-gilt.vercel.app)
+)
 
 ## My process
 
