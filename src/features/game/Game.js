@@ -36,6 +36,7 @@ const Game = () => {
               <div className="modal-body">
                 <img src="/images/image-rules-bonus.svg" alt="" />
               </div>
+              <br /><br />
             </Modal.Body>
           </Modal>
         </div>
