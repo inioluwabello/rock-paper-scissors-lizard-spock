@@ -1,10 +1,11 @@
 import React from 'react';
-import { Counter } from './features/counter/Counter';
+import Game from './features/game/Game';
 
 function App() {
   return (
     <div className="App">
-      <Counter />
+      {/* <Score /> */}
+      <Game />
     </div>
   );
 }
